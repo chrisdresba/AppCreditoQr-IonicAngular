@@ -17,9 +17,11 @@ La aplicación permite escanear un código QR (encriptado) que acumula créditos
 ![](https://github.com/chrisdresba/AppCreditoQr-IonicAngular/blob/main/Img/QR10.png?raw=true?raw=true)
 
 ***QR: 50 créditos***
+
 ![](https://github.com/chrisdresba/AppCreditoQr-IonicAngular/blob/main/Img/QR50.png?raw=true?raw=true)
 
 ***QR: 100 créditos***
+
 ![](https://github.com/chrisdresba/AppCreditoQr-IonicAngular/blob/main/Img/QR100.png?raw=true?raw=true)
 
 
