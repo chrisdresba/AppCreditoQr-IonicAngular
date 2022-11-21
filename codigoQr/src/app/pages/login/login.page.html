@@ -1,0 +1,85 @@
+<ion-content>
+  <div class="welcome">
+    <ion-row>
+      <img src="../../../assets/icon-svg-cargaccredito.png" alt="">
+      <ion-text class="light">
+        Iniciar sesión
+      </ion-text>
+    </ion-row>
+  </div>
+  <div class="container">
+    <form [formGroup]="loginForm">
+      <ion-item lines="full">
+        <ion-label position="stacked">Correo electrónico</ion-label>
+        <ion-input type="email" formControlName="email" required size="" name="email" [(ngModel)]="email"
+          placeholder="Correo electrónico">
+        </ion-input>
+      </ion-item>
+      <ion-row class="hiddenItems">
+        <small
+          *ngIf="loginForm.get('email').hasError('required') && (loginForm.get('email').dirty || loginForm.get('email').touched)">Por
+          favor, ingrese su correo.</small>
+        <small *ngIf="loginForm.get('email').hasError('email')">Ingrese un correo valido.</small>
+      </ion-row>
+      <ion-item lines="full">
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input type="password" class="form-control" required formControlName="password" name="password"
+          [(ngModel)]="password" placeholder="Contraseña"></ion-input>
+      </ion-item>
+      <ion-row class="hiddenItems">
+        <small
+          *ngIf="loginForm.get('password')?.hasError('required') && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)"
+          [ngClass]="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched ? 'visible' : 'hidden'">Ingrese
+          una contraseña.</small>
+        <small
+          *ngIf="loginForm.get('password')?.hasError('minlength') && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)"
+          [ngClass]="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched ? 'visible' : 'hidden'">No debe contener al menos 6 caracteres.</small>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="lightFont" (click)="Login()" type="submit" class="primary" expand="block"
+            [disabled]="!loginForm.valid">Ingresar</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+
+    <ion-card class="btnSeccion">
+      <ion-fab slot="">
+        <ion-fab-button (click)="testUser(1)" class="medium">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          Admin
+        </ion-fab-button>
+        <ion-fab-button (click)="testUser(3)" class="prymary">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          Usuario
+        </ion-fab-button>
+        <ion-fab-button (click)="testUser(2)" class="secondary">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          Invitado
+        </ion-fab-button>
+      </ion-fab>
+      <br>
+      <br>
+      <ion-fab class="segundaFilaBtn">
+        <ion-fab-button (click)="testUser(4)" class="success">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          Anónimo
+        </ion-fab-button>
+        <ion-fab-button (click)="testUser(5)" class="warning">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          Tester
+        </ion-fab-button>
+      </ion-fab>
+    </ion-card>
+
+
+    <ion-footer>
+      <ion-toolbar>
+        <ion-button expand="block" [routerLink]="['/registro']">
+          Registrarse
+        </ion-button>
+      </ion-toolbar>
+    </ion-footer>
+  </div>
+
+</ion-content>

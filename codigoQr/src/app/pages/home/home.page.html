@@ -1,0 +1,45 @@
+<div [style.visibility]="content_visibility">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title slot="start"> Créditos </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button color="dark" style="width:45px;height:45px;margin-top:-5px">
+      <ion-icon name="exit-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="left">
+      <ion-fab-button style="margin-top: -10px;" color="medium" (click)="Logout()">
+        <ion-icon name="exit-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-content [fullscreen]="true" style="background: none transparent" id="creditos">
+    <ion-card id="box">
+      <ion-card-header>
+        <ion-card-subtitle>Créditos de {{usuarioLog}}:</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <h1 slot="center" class="amount">{{creditos}}</h1>
+        <h1 slot="center" class="credits">Créditos</h1>
+      </ion-card-content>
+    </ion-card>
+    <div id="container">
+      <ion-button (click)=" ReadQrCode()" expand="block" class="btn-cargar" id="body">
+        <p>Cargar créditos</p>
+      </ion-button>
+
+      <ion-fab vertical="bottom" horizontal="end" slot="">
+        <ion-fab-button color="danger" style="margin:1em">
+          <img src="./../../../assets/creditos.png">
+        </ion-fab-button>
+        <ion-fab-list side="start">
+          <ion-fab-button color="danger" style="width:45px;height:45px;margin-top:20px;margin-right:10px;" (click)="LimpiarCreditos()">
+            <img src="./../../../assets/creditos.png">
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </div>
+  </ion-content>
+</div>

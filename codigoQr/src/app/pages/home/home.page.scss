@@ -1,0 +1,107 @@
+ion-toolbar {
+  --background: #24739b;
+  width: 100%;
+}
+
+ion-title {
+  --color: #fff;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+
+#box {
+  --background: rgba(253, 253, 253, 0.3);
+  margin-top: 2em;
+  width: 100vw;
+  margin-left: 0;
+}
+
+ion-content {
+  width: 100%;
+  --background: url("./../../../assets/fondo.png") no-repeat center;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 93vh;
+}
+
+#container {
+  margin: 10px;
+
+  ion-button {
+    margin-top: 2rem;
+
+    ion-icon {
+      position: absolute;
+      top: 0.5em;
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+  }
+
+  .btn-cargar {
+    height: 25vh;
+    margin-top: 8vh;
+    font-size: 1.3em;
+    --background: #0b8205;
+    --color: #fff;
+  }
+}
+
+.icon-center {
+  justify-content: center;
+}
+
+
+ion-card {
+  background: transparent;
+
+  ion-card-header {
+    padding-top: 5px !important;
+
+    ion-card-subtitle {
+      float: left;
+      font-size: 1em;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 1em;
+    }
+  }
+
+  ion-card-content {
+    padding-top: 5px !important;
+    justify-content: center;
+    flex-direction: row;
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+      text-align: center;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .amount {
+      font-size: 9em;
+    }
+
+    .credits {
+      font-size: 4rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 220px) and (max-width: 620px) {
+  ion-card {
+    ion-card-content {
+      h1 {
+        margin-left: -16px;
+      }
+    }
+  }
+}
